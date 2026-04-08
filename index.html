@@ -1,547 +1,557 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Casa do Estofador | Tecidos e Napas para Estofados</title>
-    <!-- Bootstrap 5 CSS + Icons + Google Fonts -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Isca e Companhia | Caça, Pesca e Camping</title>
+  <!-- Bootstrap 5 CSS + Icons + Google Fonts + Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fefaf5;
-            color: #2c2418;
-            scroll-behavior: smooth;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9f2;
+      color: #2c3e2f;
+      scroll-behavior: smooth;
+    }
 
-        /* Cores personalizadas */
-        :root {
-            --verde-barriga: #2e6b3e;
-            --verde-claro: #5f8b6f;
-            --bege: #f3ede5;
-            --detalhe-dourado: #d4af37;
-            --marrom: #5e3a2b;
-        }
+    h1, h2, h3, h4, .navbar-brand, .btn, .card-title, .footer-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
 
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            font-size: 1.6rem;
-            color: var(--verde-barriga) !important;
-        }
+    /* Cores personalizadas: verde natureza + tons terrosos */
+    :root {
+      --verde-mata: #2b5e2b;
+      --verde-claro: #4c8b3c;
+      --caqui: #8b7a5c;
+      --areia: #e9e3d5;
+      --destaque: #d98c2b;
+    }
 
-        .navbar-brand span {
-            color: var(--detalhe-dourado);
-            font-weight: 800;
-        }
+    .bg-verde-mata {
+      background-color: var(--verde-mata);
+    }
 
-        .nav-link {
-            font-weight: 500;
-            color: #2c3e2f !important;
-            transition: 0.3s;
-        }
+    .bg-areia {
+      background-color: var(--areia);
+    }
 
-        .nav-link:hover {
-            color: var(--detalhe-dourado) !important;
-            transform: translateY(-2px);
-        }
+    .text-verde-mata {
+      color: var(--verde-mata);
+    }
 
-        .btn-estofador {
-            background-color: var(--verde-barriga);
-            color: white;
-            border-radius: 40px;
-            padding: 10px 28px;
-            font-weight: 600;
-            border: none;
-            transition: 0.3s;
-        }
+    .text-destaque {
+      color: var(--destaque);
+    }
 
-        .btn-estofador:hover {
-            background-color: #1f4f2c;
-            transform: scale(1.02);
-            color: white;
-        }
+    .btn-destaque {
+      background-color: var(--destaque);
+      border: none;
+      color: white;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      padding: 10px 28px;
+      border-radius: 40px;
+    }
 
-        .hero {
-            background: linear-gradient(135deg, #e8dfd4 0%, #d9cfc0 100%);
-            padding: 80px 0;
-            border-bottom: 5px solid var(--detalhe-dourado);
-        }
+    .btn-destaque:hover {
+      background-color: #c07a22;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      color: white;
+    }
 
-        .hero h1 {
-            font-weight: 800;
-            color: #1f3b2c;
-            font-size: 3rem;
-        }
+    .btn-outline-verde {
+      border: 2px solid var(--verde-mata);
+      color: var(--verde-mata);
+      border-radius: 40px;
+      padding: 8px 24px;
+      font-weight: 500;
+    }
 
-        .hero .highlight {
-            color: var(--verde-barriga);
-            border-bottom: 3px solid var(--detalhe-dourado);
-            display: inline-block;
-        }
+    .btn-outline-verde:hover {
+      background-color: var(--verde-mata);
+      color: white;
+    }
 
-        .card-tecido {
-            border: none;
-            border-radius: 24px;
-            background: white;
-            transition: all 0.25s ease;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
+    .navbar {
+      background-color: white !important;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
 
-        .card-tecido:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-        }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--verde-mata);
+      letter-spacing: -0.5px;
+    }
 
-        .icon-circle {
-            background-color: var(--verde-claro);
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.2rem;
-        }
+    .navbar-brand i {
+      color: var(--destaque);
+      font-size: 1.9rem;
+    }
 
-        .icon-circle i {
-            font-size: 2.5rem;
-            color: white;
-        }
+    .nav-link {
+      font-weight: 500;
+      color: #2c3e2f !important;
+      margin: 0 6px;
+    }
 
-        .section-title {
-            position: relative;
-            font-weight: 700;
-            margin-bottom: 3rem;
-        }
+    .nav-link:hover {
+      color: var(--destaque) !important;
+    }
 
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 4px;
-            background: var(--detalhe-dourado);
-            border-radius: 4px;
-        }
+    .hero-section {
+      background: linear-gradient(107deg, #eef0e5 0%, #dde1d2 100%);
+      padding: 70px 0 60px;
+      border-bottom: 4px solid var(--destaque);
+    }
 
-        .bg-bege {
-            background-color: var(--bege);
-        }
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1f3b1a;
+    }
 
-        .info-card {
-            background: white;
-            border-radius: 30px;
-            padding: 1.5rem;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.2s;
-        }
+    .hero-sub {
+      font-size: 1.2rem;
+      color: #4a5b3e;
+    }
 
-        footer {
-            background-color: #1f2e22;
-            color: #e2e2d6;
-        }
+    .card-hover {
+      transition: all 0.25s ease-in-out;
+      border: none;
+      border-radius: 24px;
+      background: white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    }
 
-        .social-icons a {
-            color: #cfd8c5;
-            font-size: 1.5rem;
-            margin: 0 12px;
-            transition: 0.2s;
-        }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+    }
 
-        .social-icons a:hover {
-            color: var(--detalhe-dourado);
-            transform: translateY(-3px);
-        }
+    .icon-circle {
+      background-color: #eef3e8;
+      width: 70px;
+      height: 70px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 2rem;
+      color: var(--destaque);
+      margin-bottom: 1rem;
+    }
 
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: 0.2s;
-            z-index: 1050;
-            text-decoration: none;
-        }
+    .info-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      height: 100%;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+      transition: all 0.2s;
+      border-left: 6px solid var(--destaque);
+    }
 
-        .whatsapp-float:hover {
-            background-color: #20b859;
-            transform: scale(1.05);
-            color: white;
-        }
+    .footer {
+      background-color: #1e2a1c;
+      color: #dbdec9;
+      padding-top: 3rem;
+      padding-bottom: 1.5rem;
+    }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 28px;
-                bottom: 20px;
-                right: 20px;
-            }
-        }
-    </style>
+    .footer a {
+      color: #e2c28b;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffda9e;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 32px;
+      line-height: 60px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 99;
+      transition: 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebc57;
+      transform: scale(1.05);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-section {
+        padding: 50px 0 40px;
+      }
+    }
+
+    .badge-cnpj {
+      background-color: rgba(43,94,43,0.1);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--verde-mata);
+    }
+  </style>
 </head>
 <body>
 
-<!-- Whatsapp flutuante -->
-<a href="https://wa.me/5564999896161?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20tecidos%20e%20napas." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <i class="bi bi-whatsapp"></i>
+<!-- Botão Flutuante WhatsApp -->
+<a href="https://wa.me/553432923601?text=Olá%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20produtos%20de%20caça%2C%20pesca%20e%20camping!" 
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm sticky-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Casa do <span>Estofador</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarMain">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#tecidos">Tecidos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#napas">Napas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-            <a href="#contato" class="btn btn-estofador"><i class="bi bi-telephone-fill me-2"></i>Fale Conosco</a>
-        </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-fish me-2"></i> Isca & Companhia
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+      <a href="#contato" class="btn btn-destaque ms-lg-3 mt-3 mt-lg-0">Fale Conosco <i class="fas fa-arrow-right ms-1"></i></a>
     </div>
+  </div>
 </nav>
 
 <!-- HERO SECTION -->
-<section id="inicio" class="hero">
-    <div class="container">
-        <div class="row align-items-center gy-5">
-            <div class="col-lg-7">
-                <span class="badge bg-warning text-dark mb-3 py-2 px-3 rounded-pill"><i class="bi bi-star-fill me-1"></i> Tradição desde 2005</span>
-                <h1 class="mb-4">Tecidos e Napas <span class="highlight">de alta qualidade</span> para seu estofado</h1>
-                <p class="lead mb-4">Transforme seus móveis com estilo, conforto e durabilidade. A Casa do Estofador oferece o melhor mix de tecidos, napas e acessórios para profissionais e apaixonados por decoração.</p>
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="#tecidos" class="btn btn-estofador btn-lg"><i class="bi bi-grid-3x3-gap-fill me-2"></i> Ver coleções</a>
-                    <a href="#contato" class="btn btn-outline-dark btn-lg rounded-pill px-4"><i class="bi bi-envelope me-2"></i> Pedir amostra</a>
-                </div>
-                <div class="mt-5 d-flex gap-4">
-                    <div><i class="bi bi-truck fs-2 text-success me-2"></i> <span class="fw-semibold">Entrega Rápida</span></div>
-                    <div><i class="bi bi-shield-check fs-2 text-success me-2"></i> <span class="fw-semibold">Qualidade Garantida</span></div>
-                </div>
-            </div>
-            <div class="col-lg-5 text-center">
-                <div class="bg-white p-3 rounded-4 shadow d-inline-block">
-                    <i class="bi bi-scissors fs-1 text-success"></i>
-                    <i class="bi bi-brush fs-1 text-warning mx-3"></i>
-                    <i class="bi bi-layers fs-1 text-success"></i>
-                    <p class="mt-3 fst-italic text-muted">"O lugar certo para quem valoriza o acabamento perfeito"</p>
-                </div>
-            </div>
+<section id="inicio" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="badge-cnpj mb-3 d-inline-block"><i class="fas fa-store me-1"></i> Desde 2009 | Tradição em Goiás</span>
+        <h1 class="hero-title">Sua aventura começa <span class="text-destaque">aqui</span></h1>
+        <p class="hero-sub mt-3 mb-4">Tudo para caça, pesca e camping com qualidade, segurança e os melhores preços. Mais de 15 anos equipando pescadores, caçadores e aventureiros.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#produtos" class="btn btn-destaque"><i class="fas fa-compass me-2"></i> Explorar coleções</a>
+          <a href="#contato" class="btn btn-outline-verde"><i class="fas fa-map-marker-alt me-2"></i> Visite a loja</a>
         </div>
+        <div class="mt-4 d-flex gap-4 flex-wrap">
+          <div><i class="fas fa-check-circle text-destaque me-1"></i> <strong>Frete Rápido</strong></div>
+          <div><i class="fas fa-tag text-destaque me-1"></i> <strong>Preço justo</strong></div>
+          <div><i class="fas fa-star text-destaque me-1"></i> <strong>Garantia de qualidade</strong></div>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <img src="https://placehold.co/500x400/e9e3d5/5c6e3e?text=🎣+Isca+e+Companhia" alt="Loja de Pesca e Camping" class="img-fluid rounded-4 shadow-lg" style="max-height: 320px; width: auto; object-fit: cover;">
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- SEÇÃO TECIDOS -->
-<section id="tecidos" class="py-5">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-title">Nossos Tecidos Premium</h2>
-            <p class="text-muted mb-5">Linhas exclusivas para estofados residenciais, automotivos e comerciais</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card-tecido p-4 h-100 text-center">
-                    <div class="icon-circle mx-auto"><i class="bi bi-gem"></i></div>
-                    <h4 class="fw-bold">Suede & Camurça</h4>
-                    <p class="text-muted">Toque aveludado, sofisticado e resistente. Ideal para sofás e poltronas modernas.</p>
-                    <span class="badge bg-secondary bg-opacity-25 text-dark p-2">+12 cores</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card-tecido p-4 h-100 text-center">
-                    <div class="icon-circle mx-auto"><i class="bi bi-layers-fill"></i></div>
-                    <h4 class="fw-bold">Chenille</h4>
-                    <p class="text-muted">Maciez incomparável, toque premium e alta durabilidade antimanchas.</p>
-                    <span class="badge bg-secondary bg-opacity-25 text-dark p-2">Alta resistência</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card-tecido p-4 h-100 text-center">
-                    <div class="icon-circle mx-auto"><i class="bi bi-brightness-alt-high"></i></div>
-                    <h4 class="fw-bold">Linho Natural</h4>
-                    <p class="text-muted">Respirável, ecológico e elegante. Perfeito para ambientes rústicos e clean.</p>
-                    <span class="badge bg-secondary bg-opacity-25 text-dark p-2">Sustentável</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card-tecido p-4 h-100 text-center">
-                    <div class="icon-circle mx-auto"><i class="bi bi-car-front-fill"></i></div>
-                    <h4 class="fw-bold">Courvin & Automotivo</h4>
-                    <p class="text-muted">Resistente a rasgos, fácil limpeza, ideal para bancos de carros e barcos.</p>
-                    <span class="badge bg-secondary bg-opacity-25 text-dark p-2">Anti UV</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card-tecido p-4 h-100 text-center">
-                    <div class="icon-circle mx-auto"><i class="bi bi-palette-fill"></i></div>
-                    <h4 class="fw-bold">Jacquard</h4>
-                    <p class="text-muted">Desenhos exclusivos, texturas ricas e sofisticação atemporal.</p>
-                    <span class="badge bg-secondary bg-opacity-25 text-dark p-2">Alta definição</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card-tecido p-4 h-100 text-center">
-                    <div class="icon-circle mx-auto"><i class="bi bi-droplet-fill"></i></div>
-                    <h4 class="fw-bold">Impermeáveis</h4>
-                    <p class="text-muted">Tecnologia repelente a líquidos, indicado para casas com crianças e pets.</p>
-                    <span class="badge bg-secondary bg-opacity-25 text-dark p-2">Fácil limpeza</span>
-                </div>
-            </div>
-        </div>
+<!-- Categorias / Ícones Frases -->
+<section class="container py-5 my-4">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Especialistas no seu <span class="text-destaque">estilo outdoor</span></h2>
+    <p class="text-secondary w-75 mx-auto">Encontre equipamentos premium para viver a natureza com segurança e conforto.</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card-hover card p-4 text-center h-100 rounded-4">
+        <div class="icon-circle mx-auto"><i class="fas fa-fish"></i></div>
+        <h4 class="fw-semibold">Pesca Profissional</h4>
+        <p>Varas, carretilhas, molinetes, iscas artificiais e naturais, além de acessórios premium.</p>
+        <span class="small text-destaque fw-semibold">+100 itens disponíveis</span>
+      </div>
     </div>
+    <div class="col-md-4">
+      <div class="card-hover card p-4 text-center h-100 rounded-4">
+        <div class="icon-circle mx-auto"><i class="fas fa-tree"></i></div>
+        <h4 class="fw-semibold">Camping & Aventura</h4>
+        <p>Barracas, sacos de dormir, mochilas, fogareiros, lanternas e itens de sobrevivência.</p>
+        <span class="small text-destaque fw-semibold">Equipamentos leves e duráveis</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-hover card p-4 text-center h-100 rounded-4">
+        <div class="icon-circle mx-auto"><i class="fas fa-gun"></i></div>
+        <h4 class="fw-semibold">Artigos de Caça Legal</h4>
+        <p>Mochilas táticas, binóculos, coldres, roupas camufladas, acessórios regulamentados.</p>
+        <span class="small text-destaque fw-semibold">Sempre dentro da lei</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- SEÇÃO NAPAS (ESPUMAS) -->
-<section id="napas" class="py-5 bg-bege">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-title">Napas e Espumas de Alta Densidade</h2>
-            <p class="text-muted mb-5">Conforto que dura: espumas D23, D33, D45 e Napas especiais para estofados profissionais</p>
+<!-- Frases motivacionais + Diferenciais -->
+<section class="bg-areia py-5">
+  <div class="container py-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <i class="fas fa-quote-left fa-3x text-destaque opacity-50 mb-3"></i>
+        <p class="fs-3 fst-italic fw-medium text-verde-mata">"O melhor equipamento é aquele que te conecta com a natureza, sem sustos e com muito prazer."</p>
+        <hr class="w-25 mx-auto my-4 border-destaque">
+        <div class="d-flex flex-wrap justify-content-center gap-4 mt-3">
+          <div><i class="fas fa-clock text-destaque me-2"></i> +15 anos de experiência</div>
+          <div><i class="fas fa-trophy text-destaque me-2"></i> Atendimento especializado</div>
+          <div><i class="fas fa-hand-holding-heart text-destaque me-2"></i> Compromisso com o cliente</div>
         </div>
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-                <img src="https://placehold.co/600x400/f3ede5/5e3a2b?text=Espumas+de+Qualidade" alt="Napas e espumas" class="img-fluid rounded-4 shadow" style="object-fit: cover; width: 100%;">
-                <div class="mt-3 text-center small text-muted">Densidades variadas para máxima ergonomia</div>
-            </div>
-            <div class="col-lg-6">
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <div class="info-card text-center">
-                            <i class="bi bi-arrow-repeat fs-1 text-success"></i>
-                            <h5 class="mt-2">Napa D23</h5>
-                            <p>Ideal para almofadas decorativas e estofados de pouco uso.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-card text-center">
-                            <i class="bi bi-arrow-up-circle-fill fs-1 text-success"></i>
-                            <h5 class="mt-2">Napa D33</h5>
-                            <p>Conforto médio, perfeito para sofás e cadeiras do dia a dia.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-card text-center">
-                            <i class="bi bi-shield-plus fs-1 text-success"></i>
-                            <h5 class="mt-2">Napa D45</h5>
-                            <p>Alta resistência, indicada para uso intenso e áreas públicas.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-card text-center">
-                            <i class="bi bi-bag-plus fs-1 text-success"></i>
-                            <h5 class="mt-2">Napa Ortopédica</h5>
-                            <p>Viscoelástica com memória de forma, conforto terapêutico.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="alert alert-success mt-4 rounded-4">
-                    <i class="bi bi-info-circle-fill me-2"></i> Cortamos napas sob medida para o seu projeto! Solicite orçamento.
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- INFORMAÇÕES + DIFERENCIAIS COM ÍCONES E FRASES -->
-<section class="py-5">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="p-4">
-                    <i class="bi bi-truck-fast fs-1 text-success"></i>
-                    <h4 class="mt-3">Entrega ágil</h4>
-                    <p>Atendemos Chapecó e toda região Sul do Brasil com agilidade e segurança.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="p-4">
-                    <i class="bi bi-piggy-bank-fill fs-1 text-success"></i>
-                    <h4 class="mt-3">Preços competitivos</h4>
-                    <p>Distribuidora direta, sem atravessadores, garantindo o melhor custo-benefício.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="p-4">
-                    <i class="bi bi-chat-dots-fill fs-1 text-success"></i>
-                    <h4 class="mt-3">Atendimento especializado</h4>
-                    <p>Equipe pronta para auxiliar na escolha do tecido ou napa ideal.</p>
-                </div>
-            </div>
+<!-- Produtos em Destaque (Vitrine) -->
+<section id="produtos" class="container py-5 my-3">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Produtos <span class="text-destaque">Imperdíveis</span></h2>
+    <p class="text-secondary">Os mais vendidos da estação para você curtir seu hobby</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card-hover card border-0 rounded-4 overflow-hidden h-100">
+        <img src="https://placehold.co/400x260/e9e3d5/5c6e3e?text=🎣+Kit+Pesca+Pro" class="card-img-top" alt="kit pesca">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="card-title fw-bold">Kit Pesca Profissional</h5>
+            <i class="fas fa-star text-warning"></i>
+          </div>
+          <p class="card-text text-secondary">Vara de carbono + carretilha + linha multifilamento e iscas variadas.</p>
+          <div class="fw-bold text-verde-mata fs-5">R$ 289,90</div>
+          <button class="btn btn-sm btn-outline-verde mt-2 w-100 rounded-pill">Consultar disponibilidade</button>
         </div>
-        <div class="row mt-4">
-            <div class="col-12 text-center">
-                <div class="p-4 bg-white rounded-4 shadow-sm">
-                    <i class="bi bi-quote fs-1 text-muted"></i>
-                    <p class="fs-4 fst-italic">"Qualidade e tradição: há mais de 18 anos vestindo os móveis de Chapecó com tecidos e napas de primeira linha."</p>
-                    <h6 class="mt-2">– Distribuidora Barriga Verde</h6>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card-hover card border-0 rounded-4 overflow-hidden h-100">
+        <img src="https://placehold.co/400x260/e9e3d5/5c6e3e?text=⛺+Barraca+4+Estações" class="card-img-top" alt="barraca camping">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Barraca 4 Estações</h5>
+          <p class="card-text text-secondary">Impermeável, compacta, capacidade para 3 pessoas, fácil montagem.</p>
+          <div class="fw-bold text-verde-mata fs-5">R$ 479,00</div>
+          <button class="btn btn-sm btn-outline-verde mt-2 w-100 rounded-pill">Quero saber mais</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card-hover card border-0 rounded-4 overflow-hidden h-100">
+        <img src="https://placehold.co/400x260/e9e3d5/5c6e3e?text=🔭+Binóculo+Caça" class="card-img-top" alt="binóculo">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Binóculo 10x42 HD</h5>
+          <p class="card-text text-secondary">Visão noturna, resistente à água, ideal para observação e caça ética.</p>
+          <div class="fw-bold text-verde-mata fs-5">R$ 349,00</div>
+          <button class="btn btn-sm btn-outline-verde mt-2 w-100 rounded-pill">Reservar agora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-5">
+    <a href="#" class="btn btn-destaque rounded-pill px-5"><i class="fas fa-eye me-2"></i>Ver catálogo completo</a>
+  </div>
 </section>
 
-<!-- SOBRE + DADOS DA EMPRESA (CNPJ, SITUAÇÃO CADASTRAL) -->
-<section id="sobre" class="py-5 bg-bege">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="fw-bold mb-3">Distribuidora de Plásticos e Tecidos <span class="text-success">Barriga Verde</span></h2>
-                <p class="mb-2"><strong><i class="bi bi-building me-2"></i> Razão Social:</strong> Distribuidora de Plasticos e Tecidos Barriga Verde LTDA</p>
-                <p><strong><i class="bi bi-tag me-2"></i> Nome Fantasia:</strong> Casa do Estofador</p>
-                <p><strong><i class="bi bi-calendar-check me-2"></i> Situação Cadastral:</strong> Ativa desde <span class="fw-bold">03/11/2005</span> — mais de 18 anos de confiança.</p>
-                <p><strong><i class="bi bi-qr-code me-2"></i> CNPJ:</strong> 80.485.832/0001-84</p>
-                <p><strong><i class="bi bi-geo-alt-fill me-2"></i> Endereço Matriz:</strong> Avenida General Osorio, 617 - Centro, Chapecó - SC, 89802-211</p>
-                <p><strong><i class="bi bi-telephone-fill me-2"></i> Telefone / WhatsApp:</strong> (64) 99989-6161</p>
-                <hr class="my-4">
-                <p>Somos referência na região Oeste de Santa Catarina, fornecendo tecidos de decoração, napas, espumas e acessórios para estofadores, marceneiros e designers de interiores. Nosso compromisso é aliar durabilidade, beleza e conforto a cada metro vendido.</p>
-                <a href="#contato" class="btn btn-estofador mt-2"><i class="bi bi-envelope-paper-fill me-2"></i>Entre em contato agora</a>
-            </div>
-            <div class="col-lg-6">
-                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-                    <div class="card-header bg-success text-white py-3">
-                        <i class="bi bi-pin-map-fill me-1"></i> Onde nos encontrar
-                    </div>
-                    <div class="card-body p-0">
-                        <iframe class="w-100" height="300" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Avenida+General+Osorio+617+Chapeco+SC&zoom=15&language=pt-BR"></iframe>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <small><i class="bi bi-clock-history me-1"></i> Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h</small>
-                    </div>
-                </div>
-            </div>
+<!-- Sobre + Informações da Empresa (Dados CNPJ e endereço) -->
+<section id="sobre" class="bg-white py-5 border-top border-bottom">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3"><i class="fas fa-building text-destaque me-2"></i> Isca e Companhia</h2>
+        <p class="lead">Comércio varejista especializado em artigos para caça, pesca e camping. Há mais de uma década atendendo com excelência pescadores e aventureiros no interior de Goiás e para todo o Brasil.</p>
+        <div class="info-card mt-4">
+          <div class="d-flex mb-3">
+            <i class="fas fa-barcode fa-fw fa-xl text-destaque me-3 mt-1"></i>
+            <div><strong>CNPJ:</strong> 10.884.486/0001-21<br><span class="small">10.884.486/0001-21</span></div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fas fa-calendar-alt fa-fw text-destaque me-3 mt-1"></i>
+            <div><strong>Situação Cadastral:</strong> Ativa | Data: 09/06/2009</div>
+          </div>
+          <div class="d-flex mb-3">
+            <i class="fas fa-map-pin fa-fw text-destaque me-3 mt-1"></i>
+            <div><strong>Matriz / Loja Física:</strong><br>
+            Avenida Adelina Alves Vilela, 484 - Jardim Morumbi<br>Itumbiara - GO, CEP: 75524-680</div>
+          </div>
+          <div class="d-flex mb-2">
+            <i class="fas fa-phone-alt fa-fw text-destaque me-3 mt-1"></i>
+            <div><strong>Telefone & WhatsApp:</strong> (34) 3292-3601</div>
+          </div>
+          <div class="mt-3">
+            <i class="fas fa-envelope text-destaque me-2"></i> iscaecompanhia@contato.com.br (atendimento virtual)
+          </div>
         </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-areia rounded-4 p-4 shadow-sm">
+          <h4 class="fw-bold mb-3"><i class="fas fa-store me-2"></i> Horário de Funcionamento</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-clock text-destaque me-2"></i> Segunda a Sexta: 08h às 18h</li>
+            <li class="mb-2"><i class="fas fa-clock text-destaque me-2"></i> Sábado: 08h às 14h</li>
+            <li><i class="fas fa-calendar-week text-destaque me-2"></i> Domingo: Fechado (exceto eventos outdoor)</li>
+          </ul>
+          <hr class="my-3">
+          <p class="mb-0"><i class="fas fa-hand-peace me-2"></i> Retirada na loja ou entrega para toda região do Vale do Paranaíba. Consulte frete para demais localidades.</p>
+          <div class="mt-3">
+            <i class="fab fa-instagram me-2 text-destaque"></i> <i class="fab fa-facebook me-2 text-destaque"></i> <span class="small">@iscaecompanhia</span>
+          </div>
+        </div>
+        <!-- Mapa simbólico (estático) -->
+        <div class="mt-4 rounded-4 overflow-hidden shadow-sm">
+          <iframe src="https://maps.google.com/maps?q=Avenida+Adelina+Alves+Vilela,+484,+Jardim+Morumbi,+Itumbiara+-+GO,+75524-680&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- CONTATO E FORMULÁRIO RÁPIDO -->
-<section id="contato" class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Fale com a Casa do Estofador</h2>
-            <p class="text-muted">Solicite amostras, orçamentos ou tire dúvidas com nossos especialistas</p>
-        </div>
-        <div class="row g-5">
-            <div class="col-md-5">
-                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
-                    <h4 class="mb-3"><i class="bi bi-headset"></i> Atendimento direto</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><i class="bi bi-whatsapp text-success fs-5 me-3"></i> (64) 99989-6161</li>
-                        <li class="mb-3"><i class="bi bi-envelope text-success fs-5 me-3"></i> contato@casadoestofador.com.br</li>
-                        <li class="mb-3"><i class="bi bi-clock text-success fs-5 me-3"></i> Horário de funcionamento: 8h-18h (seg-sex)</li>
-                    </ul>
-                    <hr>
-                    <div class="social-icons mt-3">
-                        <a href="#" class="text-dark me-3"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-dark"><i class="bi bi-youtube"></i></a>
-                    </div>
-                    <div class="mt-4">
-                        <i class="bi bi-truck"></i> Entregamos para todo Brasil mediante cotação.
-                    </div>
-                </div>
+<!-- Depoimentos / Frases Clientes (Ícones e engajamento) -->
+<section class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 text-center">
+      <h3 class="fw-bold">O que nossos clientes dizem</h3>
+      <div class="row mt-4 g-4">
+        <div class="col-md-6">
+          <div class="p-4 bg-areia rounded-4 h-100">
+            <i class="fas fa-quote-left fa-2x text-destaque mb-2"></i>
+            <p class="fst-italic">"Loja completa, tudo que preciso para pescaria encontro aqui. Atendimento excepcional!"</p>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+              <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i>
+              <span class="ms-2 fw-semibold">— Carlos M., Pescador</span>
             </div>
-            <div class="col-md-7">
-                <div class="bg-white p-4 rounded-4 shadow-sm">
-                    <h4 class="mb-4"><i class="bi bi-chat-text-fill"></i> Envie sua mensagem</h4>
-                    <form action="#" method="post">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Nome completo</label>
-                                <input type="text" class="form-control" placeholder="Seu nome" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Telefone/WhatsApp</label>
-                                <input type="tel" class="form-control" placeholder="(64) 99999-9999">
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label">E-mail</label>
-                                <input type="email" class="form-control" placeholder="seuemail@exemplo.com" required>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label">Mensagem / Produto de interesse</label>
-                                <textarea rows="4" class="form-control" placeholder="Gostaria de informações sobre tecidos para sofá, napa D33..."></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-estofador w-100"><i class="bi bi-send me-2"></i> Enviar mensagem</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-md-6">
+          <div class="p-4 bg-areia rounded-4 h-100">
+            <i class="fas fa-quote-left fa-2x text-destaque mb-2"></i>
+            <p class="fst-italic">"Equipamentos de camping de primeira, já fiz trilhas com a barraca que comprei. Recomendo Isca e Companhia."</p>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+              <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i>
+              <span class="ms-2 fw-semibold">— Fernanda S., Aventureira</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="pt-5 pb-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <h5 class="text-white mb-3"><i class="bi bi-shop"></i> Casa do Estofador</h5>
-                <p class="small">Especialistas em tecidos, napas e soluções para estofamento. Qualidade e tradição desde 2005.</p>
-                <p class="small mb-0">CNPJ: 80.485.832/0001-84</p>
-                <p class="small">© 2025 Todos os direitos reservados.</p>
-            </div>
-            <div class="col-md-4 mb-4">
-                <h5 class="text-white mb-3">Links úteis</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#tecidos" class="text-decoration-none text-light-emphasis">Tecidos</a></li>
-                    <li class="mt-2"><a href="#napas" class="text-decoration-none text-light-emphasis">Napas e Espumas</a></li>
-                    <li class="mt-2"><a href="#sobre" class="text-decoration-none text-light-emphasis">Sobre a empresa</a></li>
-                    <li class="mt-2"><a href="#contato" class="text-decoration-none text-light-emphasis">Fale conosco</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 mb-4">
-                <h5 class="text-white mb-3">Atendimento</h5>
-                <p class="small mb-1"><i class="bi bi-geo-alt"></i> Av. General Osorio, 617 - Centro, Chapecó/SC</p>
-                <p class="small mb-1"><i class="bi bi-telephone"></i> (64) 99989-6161</p>
-                <p class="small"><i class="bi bi-envelope"></i> contato@casadoestofador.com.br</p>
-            </div>
+<!-- Contato / Formulário rápido + informações finais -->
+<section id="contato" class="bg-verde-mata text-white py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-md-5">
+        <h3 class="fw-bold"><i class="fas fa-paper-plane me-2"></i> Fale com a gente</h3>
+        <p class="mt-3 opacity-75">Tire dúvidas, peça orçamentos ou reserve produtos diretamente com nossa equipe.</p>
+        <div class="mt-4">
+          <p><i class="fas fa-phone-alt me-3"></i> (34) 3292-3601</p>
+          <p><i class="fab fa-whatsapp me-3"></i> (34) 3292-3601 (atendimento também via WhatsApp)</p>
+          <p><i class="fas fa-envelope me-3"></i> contato@iscaecompanhia.com.br</p>
+          <p><i class="fas fa-clock me-3"></i> Seg-Sex: 8h-18h | Sáb: 8h-14h</p>
         </div>
-        <hr class="bg-light opacity-25">
-        <div class="text-center small">Distribuidora Barriga Verde LTDA | Situação cadastral ativa desde 03/11/2005 | Confiança que estofa.</div>
+        <div class="mt-4">
+          <a href="#" class="text-white me-3 fs-4"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white me-3 fs-4"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="bg-white p-4 rounded-4 text-dark">
+          <h4 class="fw-bold text-verde-mata">Envie uma mensagem rápida</h4>
+          <form action="#" method="post">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Seu nome" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="E-mail ou telefone" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="3" placeholder="Diga o que procura (pesca, camping, caça)"></textarea>
+            </div>
+            <button type="submit" class="btn btn-destaque w-100"><i class="fas fa-paper-plane me-2"></i> Enviar mensagem</button>
+          </form>
+          <p class="small text-secondary mt-3">Retornaremos em até 24h úteis. Ou ligue direto!</p>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- Footer completo -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-4">
+        <h4 class="fw-bold"><i class="fas fa-fish me-1"></i> Isca e Companhia</h4>
+        <p class="small">Razão Social: Isca e Companhia Comercio LTDA | CNPJ 10.884.486/0001-21<br>
+        Situação Cadastral: ATIVA desde 09/06/2009. Tradição em artigos outdoor.</p>
+        <p class="small mb-0">© 2025 Isca e Companhia - Todos os direitos reservados.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Links Úteis</h5>
+        <ul class="list-unstyled small">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre a empresa</a></li>
+          <li><a href="#contato">Fale Conosco</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h5>Endereço</h5>
+        <address class="small">
+          Av. Adelina Alves Vilela, 484<br>
+          Jardim Morumbi, Itumbiara - GO<br>
+          CEP: 75524-680<br>
+          <i class="fas fa-phone-alt me-1"></i> (34) 3292-3601
+        </address>
+      </div>
+    </div>
+    <hr class="border-secondary">
+    <div class="text-center small">
+      Isca e Companhia - Sua melhor escolha para pesca, caça legal e camping no Centro-Oeste.
+    </div>
+  </div>
 </footer>
 
-<!-- Bootstrap JS Bundle -->
+<!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Simples interação para alerta de formulário (apenas demonstração) -->
+<!-- script para navegação suave (opcional) -->
 <script>
-    document.querySelector("form")?.addEventListener("submit", function(e) {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if (target) {
         e.preventDefault();
-        alert("Mensagem enviada com sucesso! Em breve nossa equipe entrará em contato. Obrigado por confiar na Casa do Estofador.");
-        this.reset();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
+  });
 </script>
 </body>
 </html>
